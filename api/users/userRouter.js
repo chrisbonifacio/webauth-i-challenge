@@ -8,8 +8,6 @@ const bcrypt = require("bcrypt")
 
 const { validateLogin } = require("../middleware/auth")
 
-router.use(validateLogin)
-
 // GET all users
 router.get("/users", async (req, res) => {
   const users = await Users.find()
