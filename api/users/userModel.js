@@ -7,8 +7,8 @@ module.exports = { find, findUser, add, update, remove }
 function find(id) {
   if (id) {
     return db("users")
-      .where({ id: id })
       .select("*")
+      .where({ id: id })
   } else {
     return db("users")
   }
